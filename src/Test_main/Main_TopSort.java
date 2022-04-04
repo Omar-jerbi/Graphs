@@ -27,7 +27,7 @@ public class Main_TopSort {
 			
 		System.out.println();
 		
-		var topSorted = TopSort.getRes(g);
+		var topSorted = TopSort.topologicalOrderSimple(g);
 		
 		topSorted.displayGraph();
 		
