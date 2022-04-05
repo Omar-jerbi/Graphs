@@ -27,9 +27,11 @@ public class Main_TopSort {
 			
 		System.out.println();
 		
-		var topSorted = TopSort.topologicalOrderSimple(g);
+		TopSort.topologicalOrderSimple(g).displayGraph();
+		System.out.println();
+		TopSort.topologicalOrderWEdges(g).displayGraph();
 		
-		topSorted.displayGraph();
+		
 		
 
 		
