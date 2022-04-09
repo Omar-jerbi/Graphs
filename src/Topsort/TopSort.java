@@ -15,8 +15,7 @@ public class TopSort {
 		var S = new LinkedList<Node>();
 		
 		var inDegree = new int[g.NodesEdges.size()];
-		
-		
+				
 		var ORD = new myGraph();
 		
 		int i = 0;
@@ -24,18 +23,15 @@ public class TopSort {
 			inDegree[i] = lN.get(0).inEdges;
 			i++;
 		}
-		
-		
+				
 		for(var lN : g.NodesEdges) {
 			if(lN.get(0).inEdges == 0) {
 				S.add(lN.get(0));
 			}
 		}
 		
-		while(!S.isEmpty()) {
-			
+		while(!S.isEmpty()) {		
 			var u = S.pop();
-
 			
 			var auxE = new ArrayList<Node>();
 			auxE.add(u);	
@@ -50,23 +46,18 @@ public class TopSort {
 						inDegree[v.tag - 65]--;
 						if(inDegree[v.tag - 65] == 0) S.add(v);
 					}
-					
 				}
 			}
-			
 		}
 				
 		return ORD;
 	}
-	
-	
-	
+/************************************************************************************/	
 	public static myGraph topologicalOrderWEdges(myGraph g) {
 		var S = new LinkedList<Node>();
 		
 		var inDegree = new int[g.NodesEdges.size()];
-		
-		
+				
 		var ORD = new myGraph();
 		
 		int i = 0;
@@ -74,18 +65,15 @@ public class TopSort {
 			inDegree[i] = lN.get(0).inEdges;
 			i++;
 		}
-		
-		
+				
 		for(var lN : g.NodesEdges) {
 			if(lN.get(0).inEdges == 0) {
 				S.add(lN.get(0));
 			}
 		}
 		
-		while(!S.isEmpty()) {
-			
+		while(!S.isEmpty()) {	
 			var u = S.pop();
-
 			
 			var auxE = new ArrayList<Node>();
 			auxE.add(u);	
